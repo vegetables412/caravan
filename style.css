@@ -17,7 +17,12 @@ a {
   clear: both;
 }
 
+header, nav, h2, .main-visual, footer {
+  font-family: Chalkduster, "Bradley Hand", Courier, "Segoe Print", sans-serif;
+}
+
 header {
+  position: relative; /* #socialの絶対位置指定の基準位置を変更する */
   width: 90%;
   padding: 15px 0;
   margin: 0 auto;
@@ -27,6 +32,17 @@ header {
 /* headerタグ内のheadlineクラスにのみ反映される */
 header .headline{
   font-size: 32px;
+}
+
+.social {
+  position: absolute; /* .headerの左上を基準に位置を指定する */
+  top: 22px; /* .headerの左上から22px下に移動 */
+  right: 22px; /* .headerの右上から22px左に移動 */
+}
+
+.social i {
+  display: inline-block;
+  margin-left: 20px;
 }
 
 .nav-list {
